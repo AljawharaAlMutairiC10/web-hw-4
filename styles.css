@@ -1,1 +1,22 @@
 /* 🎓 تحت هذا التعليق أتحفونا بتصاميمكم التي تليق بقدر حاسبة الدرجات */
+
+body{
+
+    background-color: beige;
+}
+
+.pp{
+   margin-left: 600px;
+   margin-right: 500px;
+}
+
+.directions{
+    background-color: rgb(182, 130, 111);
+    font-size: 1cm;
+    width: 500px;
+    height: 50px;
+}
+
+.x{
+    font-size: 25px;
+}

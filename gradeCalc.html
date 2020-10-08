@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>حاسبة الدرجات 🎓🎓</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./cal.js">
   </head>
   <body>
-    <div class="wrapper">
-      <h1>الحاسبة 🔢</h1>
-
+    <!---  واجهت مشكلة في برمجة الدرجة بأحرف ف استبدلتها بصورة 
+      بعد محاولات والكود اللي جربته موجود تحت  -->
+    <div class="pp">
+      <h1  >الحاسبة 🔢</h1>
+     
       <div class="directions">أدخل درجاتك، كل درجة في الحقل الخاص بها</div>
-
-      <input id="Quizes" type="text" />
-      <input id="Midterm" type="text" />
-      <input id="FinalTest" type="text" />
-      <input id="Oral" type="text" />
-
+      
+     <div >           
+      <input classs="inputs" id="Quizes" type="text" placeholder="Quizes"/>
+     </div>
+     
+      <div>
+        <input id="Midterm" type="text" placeholder="Midterm" />
+      </div>
+      <div>
+        <input id="FinalTest" type="text" placeholder="FinalTest">
+      </div>
+      <div>
+        <input id="Oral" type="text" placeholder="Oral"/>
+      </div>
+      
+      
       <input
         id="submitButton"
         type="button"
@@ -24,11 +37,54 @@
         onClick="submit()"
       />
 
-      <p>مجموع درجاتك (بالأرقام) هو</p>
+      <p class="x">مجموع درجاتك (بالأرقام) هو</p>
       <div id="total_grades"></div>
-
-      <p>درجتك النهائية هي (بالأحرف)</p>
-      <div id="final_grade"></div>
+    
+      
+      
+     
+      
+      <p>يمكنك معرفة تقييمك من خلال الصورة </p>
+      <div id="grades_a" >
+        <img src="./img/grades.png" >
+      </div>
+      
+    
     </div>
+   
+<script>
+
+  
+const submit=() =>{
+    let Quizes = document.getElementById(`Quizes`).value;
+    let Midterm = document.getElementById(`Midterm`).value;
+    let FinalTest = document.getElementById(`FinalTest`).value;
+    let Oral = document.getElementById(`Oral`).value;
+    
+    let totalGrades =parseFloat(Quizes)  +parseFloat(Midterm) + parseFloat(FinalTest) + parseFloat(Oral);
+
+    document.getElementById("total_grades").innerHTML = totalGrades;
+
+
+    
+        //if (totalGrades >=60 && totalGrades <=69) {
+        //  document.getElementById("status").innerHTML = "D";
+       // }else 
+       // if (totalGrades >=70 && totalGrades <=79) {
+        //  document.getElementById("status").innerHTML = "C";
+        //}
+       //else 
+       // if (totalGrades >=80 && totalGrades <=95) {
+        //  document.getElementById("status").innerHTML = "B";
+      
+        //}
+        //else 
+        //if (totalGrades >=96 && totalGrades <=100) {
+        //  document.getElementById("status").innerHTML = "A";
+      
+        
+
+      }
+</script>
   </body>
 </html>
